@@ -1,18 +1,18 @@
-#takes a string of characters as input and returns 'Deja Vu' if there are duplicit characters
-#returns 'Unique' if there are no duplicit characters
+#translates a sentence in english to pig latin
+#pig latin moves first letter of a word to the end and then adds "ay", eg. road -> oadray
+#currently only supports words with no special symbols or capitalization (maybe later)
 
-rnd_letters = str(input())
-lst_letters = list(rnd_letters)
+english = str(input())
+english_lst = english.split()
 
-for i in lst_letters:
-    count = lst_letters.count(i)
-    if count > 1:
-        x = 0
-        print('Deja Vu')
-        break
-    else:
-        x = 1
-        continue
+def latinize(word):
+    letters = list(word)
+    letters.append(letters[0])
+    letters.remove(letters[0])
+    letters.append('ay')
+    latin = ''.join(letters)
+    return (latin)
 
-if x == 1:
-    print('Unique') 
+latin_lst = list(map(latinize, english_lst))
+pig_latin = ' '.join(latin_lst)
+print(pig_latin)

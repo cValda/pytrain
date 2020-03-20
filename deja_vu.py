@@ -15,4 +15,4 @@ for i in lst_letters:
         continue
 
 if x == 1:
-    print('Unique') 
+    print('Unique')

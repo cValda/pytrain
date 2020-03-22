@@ -1,7 +1,11 @@
-#a short code that removes any non-alphabetical symbols from a string and reverses it
+#this function takes a youtube link and extracts a video id from it
 
-code = str(input())
-lst_code = list(code)
-alpha = [i for i in lst_code if i.isalpha() or i == ' ']
-alpha.reverse()
-print(''.join(alpha))
+link = input()
+
+def get_id(l):
+    split = link.split('/')
+    watch = split[-1].split('=')
+    id = watch[-1]
+    return id
+
+print(get_id(link))

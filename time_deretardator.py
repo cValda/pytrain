@@ -1,7 +1,7 @@
 #a function that translates the retarded time format (10:00 AM, 2:30 PM) to normal 24 hour time
 #errors due to incorrect input are not accounted for yet
 
-regular_time = input()
+regular_time = str(input())
 
 def correct_time(t):
     regular_list = list(t)
